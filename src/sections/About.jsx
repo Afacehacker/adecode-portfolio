@@ -55,8 +55,7 @@ const About = () => {
                 </p>
                 <p>
                   I have built scalable web applications ranging from social media automation tools to robust e-commerce marketplaces, 
-                  NGO platforms, portfolios e.t.c. Formally trained in <span className="dark:text-white text-dark-black font-black">Full Stack Development at Kwara Tech</span>, 
-                  my focus is always on delivering premium quality that drives real business growth.
+                  NGO platforms, portfolios e.t.c. My focus is always on delivering premium quality that drives real business growth.
                 </p>
               </div>
             </div>
@@ -96,7 +95,7 @@ const About = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="group p-8 glass-card dark:border-white/5 border-black/5 hover:border-primary/20 transition-all duration-500 text-center bg-white/50 dark:bg-transparent shadow-sm hover:shadow-xl dark:shadow-none"
+                    className="group p-4 sm:p-8 glass-card dark:border-white/5 border-black/5 hover:border-primary/20 transition-all duration-500 text-center bg-white/50 dark:bg-transparent shadow-sm hover:shadow-xl dark:shadow-none"
                 >
                     <p className="text-4xl font-black neon-text mb-2 group-hover:scale-110 transition-transform duration-300">{stat.value}</p>
                     <p className="text-[10px] dark:text-gray-500 text-gray-400 uppercase font-black tracking-[0.2em]">{stat.label}</p>
