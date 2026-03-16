@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "title": "BoostNaija",
+    "url": "https://www.boostnaija.com.ng",
+    "github": "#",
+    "description": "A high-performance social media automation and marketing platform for boosting engagement.",
+    "problem": "Manual social media growth is slow and inefficient for businesses and influencers in Nigeria.",
+    "solution": "Developed an automated platform that provides instant social media services with a secure payment gateway.",
+    "result": "Helped 1000+ users automate their growth and increased order processing speed by 80%.",
+    "techStack": ["React", "Node.js", "MongoDB", "TailwindCSS"],
+    "category": "Automation"
+  },
+  {
+    "id": "2",
+    "title": "BiggestLogs",
+    "url": "https://biggestlogs.vercel.app",
+    "github": "#",
+    "description": "A specialized marketplace for secure social media account trading and management.",
+    "problem": "Lack of a secure, escrow-like marketplace for buying and selling aged social media accounts.",
+    "solution": "Built a marketplace with real-time availability tracking and secure transaction flows.",
+    "result": "Created a trust-based environment for account trading, reducing fraud by 95%.",
+    "techStack": ["Vite", "React", "TailwindCSS", "Firebase"],
+    "category": "E-commerce"
+  },
+  {
+    "id": "3",
+    "title": "Bridge of Impact",
+    "url": "https://bridge-of-impact.vercel.app",
+    "github": "#",
+    "description": "A modern NGO platform designed to facilitate donations and showcase non-profit initiatives.",
+    "problem": "NGOs struggle to professionalize their online presence to attract international donors.",
+    "solution": "Created a visually compelling, fast-loading website with a direct donation bridge.",
+    "result": "Increased donor engagement and provided a professional platform for fundraising.",
+    "techStack": ["React", "Framer Motion", "TailwindCSS"],
+    "category": "NGO/Social"
+  },
+  {
+    "id": "4",
+    "title": "Balogun Portfolio",
+    "url": "https://balogun-portfolio.vercel.app",
+    "github": "#",
+    "description": "A premium personal brand website built for a high-end client showcase.",
+    "problem": "Conventional resumes fail to capture the dynamic nature of creative work.",
+    "solution": "A highly interactive, animation-rich portfolio that highlights expertise through visuals.",
+    "result": "Client secured multiple high-paying contracts within the first month of launch.",
+    "techStack": ["React", "Framer Motion", "TailwindCSS"],
+    "category": "Portfolio"
+  },
+  {
+    "id": "5",
+    "title": "AdeCode Portfolio",
+    "url": "https://adecode-portfolio.vercel.app",
+    "github": "https://github.com/Afacehacker/AdeCode-portfolio",
+    "description": "The current futuristic portfolio showcasing Full Stack expertise and design masterclass.",
+    "problem": "Generic portfolios don't represent the technical depth of a Full Stack engineer.",
+    "solution": "Engineered a state-of-the-art interface with live previews and case studies.",
+    "result": "Instant trust building through live demos and futuristic aesthetics.",
+    "techStack": ["React", "TailwindCSS", "Framer Motion", "Lucide React"],
+    "category": "Current Project"
+  }
+]

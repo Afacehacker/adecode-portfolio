@@ -1,0 +1,146 @@
+@import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --color-primary: #00f2fe;
+  --color-primary-dark: #00c3ff;
+  --color-secondary: #4facfe;
+  --color-secondary-dark: #00f2fe;
+  --color-accent: #7000ff;
+  
+  /* Dark mode colors */
+  --color-dark-lighter: #1a1a2e;
+  --color-dark: #16213e;
+  --color-dark-darker: #0f3460;
+  --color-dark-black: #0a0a0c;
+  
+  /* Light mode colors */
+  --color-light-bg: #f8fafc;
+  --color-light-card: #ffffff;
+  --color-light-border: #e2e8f0;
+  --color-light-text: #1e293b;
+  --color-light-text-muted: #64748b;
+  
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes glow {
+    0% { box-shadow: 0 0 5px rgba(0, 242, 254, 0.2); }
+    100% { box-shadow: 0 0 20px rgba(0, 242, 254, 0.6); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+}
+
+:root {
+  --primary: #00f2fe;
+  --secondary: #4facfe;
+  --accent: #7000ff;
+  --bg-color: #f8fafc;
+  --text-color: #1e293b;
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --border-color: rgba(0, 0, 0, 0.1);
+}
+
+.dark {
+  --bg-color: #050505;
+  --text-color: #ffffff;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  @apply selection:bg-primary/30 overflow-x-hidden transition-colors duration-300;
+  font-family: 'Outfit', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+@utility glass {
+  background-color: var(--card-bg);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+}
+
+@utility glass-card {
+  @apply glass rounded-2xl transition-all duration-300 shadow-sm border;
+}
+
+@utility neon-text {
+  background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.3));
+}
+
+@utility btn-primary {
+  @apply px-8 py-3 bg-gradient-to-r from-primary to-secondary text-dark-black font-bold rounded-full 
+         hover:shadow-[0_0_25px_rgba(0,242,254,0.5)] transition-all duration-300 transform hover:-translate-y-1 inline-flex items-center justify-center;
+}
+
+@utility btn-secondary {
+  @apply px-8 py-3 border-2 border-primary/50 text-primary font-bold rounded-full
+         hover:bg-primary/10 transition-all duration-300 inline-flex items-center justify-center;
+}
+
+:root:not(.dark) .btn-secondary {
+  @apply border-primary text-primary-dark;
+}
+
+@utility section-title {
+  @apply text-4xl md:text-5xl font-black mb-8 dark:text-white text-dark-black tracking-tighter;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 9999px;
+  border: 2px solid var(--bg-color);
+}
+
+/* New Background Styles */
+.bg-mesh {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  background-color: var(--bg-color);
+}
+
+.dark .bg-mesh {
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(112, 0, 255, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(0, 242, 254, 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(112, 0, 255, 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(0, 242, 254, 0.1) 0px, transparent 50%);
+}
+
+:root:not(.dark) .bg-mesh {
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(112, 0, 255, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(0, 242, 254, 0.05) 0px, transparent 50%);
+}
+
+.bg-dot-grid {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.dark .bg-dot-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
